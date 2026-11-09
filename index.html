@@ -3,122 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>互动心理测试合集</title>
+<title>QUIZ ARCHIVE · 互动心理测试合集</title>
 <style>
-:root{--bg:#fdf6f9;--ink:#3f3050;--ink2:#5d4a6e;--muted:#a394b3;--line:rgba(217,107,138,.16);--rose:#d96b8a;--violet:#8a7bb8;--sand:#f3c9b3}
+:root{--ink:#3f3050;--muted:#a08fae;--rose:#d96b8a;--violet:#8a7bb8;--gold:#c9a35c;--line:rgba(93,74,110,.16)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
 body{
-  color:var(--ink2);
-  font-family:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
-  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+  color:#5d4a6e;font-family:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden;
   background:
-    radial-gradient(1000px 720px at 6% -12%,rgba(217,107,138,.22),transparent 62%),
-    radial-gradient(880px 620px at 104% 0%,rgba(138,123,184,.22),transparent 60%),
-    radial-gradient(760px 560px at 50% 108%,rgba(243,201,179,.28),transparent 66%),
-    var(--bg);
-  background-attachment:fixed;min-height:100vh;overflow-x:hidden;
+    radial-gradient(900px 620px at 50% -10%,#fffdfb 0,rgba(255,253,251,0) 55%),
+    radial-gradient(1000px 780px at -8% 2%,rgba(217,107,138,.2),transparent 56%),
+    radial-gradient(880px 700px at 106% 6%,rgba(138,123,184,.2),transparent 56%),
+    radial-gradient(720px 540px at 50% 108%,rgba(243,201,179,.34),transparent 66%),
+    #fbf5ef;
+  background-attachment:fixed;
 }
-body::before{
-  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.28;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E");
-}
-.app{position:relative;z-index:1;max-width:580px;margin:0 auto;padding:calc(52px + env(safe-area-inset-top)) 20px calc(46px + env(safe-area-inset-bottom))}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(rgba(93,74,110,.11) 1px,transparent 1px);background-size:24px 24px;
+  -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,.3) 62%,transparent);
+  mask-image:linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,.3) 62%,transparent)}
+.app{position:relative;z-index:1;max-width:580px;margin:0 auto;padding:calc(18px + env(safe-area-inset-top)) 18px calc(44px + env(safe-area-inset-bottom))}
 
-/* header */
-.head{text-align:center;margin-bottom:38px;position:relative}
-.head::before{content:"";position:absolute;left:50%;top:-40px;width:280px;height:280px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(217,107,138,.16),transparent 70%);animation:breathe 7s ease-in-out infinite}
-@keyframes breathe{0%,100%{opacity:.7;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.08)}}
-.kicker{position:relative;display:inline-flex;align-items:center;gap:10px;font-size:10.5px;letter-spacing:.34em;color:var(--rose);font-weight:800;margin-bottom:16px}
-.kicker::before,.kicker::after{content:"";width:22px;height:1px;background:linear-gradient(90deg,transparent,var(--rose))}
+/* 报头跑马灯 */
+.ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.5);padding:5px 0;margin:0 -18px 22px}
+.tick{display:flex;width:max-content;animation:marq 22s linear infinite}
+.tick span{white-space:nowrap;padding-right:26px;font-size:8.5px;letter-spacing:.3em;font-weight:700;color:rgba(93,74,110,.5)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* 报头 */
+.mast{position:relative;padding:34px 22px 26px 26px;border:1px solid rgba(93,74,110,.18);border-radius:3px;
+  background:linear-gradient(172deg,#fffefc,#fdf6f1 60%,#fbf1f6);
+  box-shadow:6px 6px 0 rgba(217,107,138,.14),0 34px 60px -38px rgba(93,74,110,.55),inset 0 0 0 1px rgba(255,255,255,.9);
+  margin-bottom:20px}
+.frame{position:absolute;inset:8px;border:1px solid var(--line);pointer-events:none}
+.frame i{position:absolute;width:15px;height:15px;border:1.5px solid rgba(217,107,138,.6)}
+.frame i:nth-child(1){top:-1px;left:-1px;border-right:0;border-bottom:0}
+.frame i:nth-child(2){top:-1px;right:-1px;border-left:0;border-bottom:0}
+.frame i:nth-child(3){bottom:-1px;left:-1px;border-right:0;border-top:0}
+.frame i:nth-child(4){bottom:-1px;right:-1px;border-left:0;border-top:0}
+.kicker{display:flex;align-items:center;gap:10px;font-size:9.5px;letter-spacing:.3em;color:#b07ab5;font-weight:800}
+.kicker::before,.kicker::after{content:"";width:20px;height:1px;background:linear-gradient(90deg,transparent,var(--rose))}
 .kicker::after{background:linear-gradient(90deg,var(--rose),transparent)}
-h1{position:relative;margin:0;font-size:clamp(30px,8.4vw,42px);line-height:1.3;font-weight:900;letter-spacing:2px;
-  background:linear-gradient(165deg,#3f3050 6%,#8a7bb8 54%,#d96b8a 96%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.sub{position:relative;margin-top:14px;font-size:13px;color:var(--muted);letter-spacing:.4px}
+h1{margin:10px 0 0;font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;
+  font-size:clamp(32px,9vw,42px);line-height:1.26;font-weight:900;letter-spacing:3px;color:var(--ink);text-shadow:0 1px 0 #fff}
+h1 em{font-style:normal;background:linear-gradient(120deg,#d96b8a,#8a7bb8);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;border-bottom:2px solid rgba(217,107,138,.32)}
+.sub{margin-top:12px;font-size:10px;letter-spacing:.24em;color:var(--muted);text-transform:uppercase}
+.stamp{position:absolute;right:12px;top:12px;width:58px;height:58px;border:1px dashed rgba(217,107,138,.55);border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-11deg);background:rgba(255,255,255,.55);
+  color:var(--rose);font-weight:900;font-size:10px;line-height:1.15;letter-spacing:.04em;box-shadow:0 2px 0 rgba(217,107,138,.12)}
+.stamp small{font-size:5.5px;letter-spacing:.16em;color:#b07ab5;font-weight:800;margin-top:2px}
+.side{position:absolute;left:7px;top:40%;writing-mode:vertical-rl;font-size:7.5px;letter-spacing:.34em;font-weight:700;color:rgba(93,74,110,.34)}
 
-/* cards */
-.card{
-  display:block;position:relative;overflow:hidden;
-  background:linear-gradient(150deg,rgba(255,255,255,.96),rgba(255,250,253,.9));
-  border:1px solid rgba(255,255,255,.9);border-radius:22px;padding:24px 22px 20px;margin-bottom:18px;
-  text-decoration:none;color:inherit;
-  box-shadow:0 26px 50px -32px rgba(93,74,110,.55),0 2px 0 rgba(255,255,255,.9) inset;
-  transition:transform .22s cubic-bezier(.2,.8,.3,1),box-shadow .22s;
-}
-.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--rose),var(--violet))}
-.card::after{content:"";position:absolute;right:-56px;top:-56px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(217,107,138,.16),transparent 70%)}
-.card:hover{transform:translateY(-3px);box-shadow:0 34px 62px -34px rgba(93,74,110,.6)}
-.card:active{transform:translateY(0)}
-.no{font-size:10px;letter-spacing:.3em;color:var(--violet);font-weight:800}
-.card h2{margin:8px 0 8px;font-size:clamp(20px,5.6vw,24px);line-height:1.35;color:var(--ink);font-weight:900;letter-spacing:.6px;padding-right:86px}
-.card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.75;padding-right:10px}
-.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
-.meta span{font-size:11px;padding:5px 11px;border:1px solid var(--line);border-radius:20px;color:var(--ink2);background:rgba(255,255,255,.75);font-weight:600}
-.go{margin-top:18px;font-size:13.5px;font-weight:800;color:var(--rose);display:flex;align-items:center;gap:6px}
-.go i{width:20px;height:1px;background:linear-gradient(90deg,var(--rose),transparent);display:inline-block}
-.art{position:absolute;right:16px;top:20px;width:78px;height:78px;opacity:.92;filter:drop-shadow(0 12px 22px rgba(217,107,138,.28))}
-.dark .art{filter:drop-shadow(0 12px 22px rgba(201,163,92,.3))}
+/* 卡片 */
+.card{position:relative;display:block;text-decoration:none;color:inherit;margin-bottom:18px;
+  border:1px solid rgba(93,74,110,.18);border-radius:3px;padding:30px 20px 18px;
+  background:linear-gradient(172deg,#fffefc,#fdf7f2);overflow:hidden;
+  box-shadow:6px 6px 0 rgba(217,107,138,.14),0 30px 54px -38px rgba(93,74,110,.55)}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#d96b8a,#8a7bb8)}
+.card .corner{position:absolute;inset:8px;border:1px dotted rgba(93,74,110,.2);pointer-events:none}
+.card .tidx{position:absolute;right:12px;top:12px;width:40px;height:40px;border:1px dashed rgba(217,107,138,.5);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;color:var(--rose);transform:rotate(9deg);letter-spacing:.04em;background:rgba(255,255,255,.5)}
+.card .no{font-size:8.5px;letter-spacing:.3em;color:#b07ab5;font-weight:800}
+.card h2{margin:8px 0 10px;font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;
+  font-size:clamp(20px,5.8vw,25px);line-height:1.35;color:var(--ink);font-weight:900;letter-spacing:1px;padding-right:56px}
+.card p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.8}
+.art{position:absolute;right:14px;bottom:14px;width:66px;height:66px;opacity:.9;filter:drop-shadow(0 10px 18px rgba(217,107,138,.25))}
+.meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.meta span{font-size:9.5px;letter-spacing:.08em;padding:4px 8px;border:1px dashed rgba(217,107,138,.4);border-radius:2px;
+  background:#fffdfa;color:#5d4a6e;font-weight:700;box-shadow:2px 2px 0 rgba(217,107,138,.12)}
+.meta span:nth-child(1){transform:rotate(-2deg)}
+.meta span:nth-child(2){transform:rotate(1.2deg)}
+.meta span:nth-child(3){transform:rotate(-1deg)}
+.go{margin-top:16px;font-size:12px;font-weight:900;color:var(--rose);letter-spacing:.14em;display:flex;align-items:center;gap:8px}
+.go::before{content:"";width:18px;height:1px;background:var(--rose)}
 
-/* speed row */
-.speed{display:flex;gap:12px;margin-top:6px}
-.speed a{flex:1;position:relative;text-align:center;text-decoration:none;color:var(--ink2);font-size:12.5px;font-weight:700;
-  background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);border-radius:16px;padding:15px 8px;
-  box-shadow:0 14px 30px -26px rgba(93,74,110,.7);transition:transform .2s}
-.speed a:active{transform:translateY(1px)}
-.speed a b{display:block;font-size:10px;letter-spacing:.2em;color:var(--violet);font-weight:800;margin-bottom:4px}
+/* 暗色卡 */
+.card.dark{background:linear-gradient(172deg,#34243f,#2b1e36 62%,#37243c);border-color:rgba(201,163,92,.35);
+  box-shadow:6px 6px 0 rgba(201,163,92,.12),0 34px 66px -38px #1a1220,inset 0 0 0 1px rgba(255,255,255,.04)}
+.card.dark::before{background:linear-gradient(180deg,#c9a35c,#e88ba0)}
+.card.dark .corner{border-color:rgba(201,163,92,.2)}
+.card.dark .tidx{border-color:rgba(201,163,92,.55);color:#d8b979;background:rgba(201,163,92,.06)}
+.card.dark .no{color:#c9a35c}
+.card.dark h2{color:#f4ece0;text-shadow:0 1px 0 rgba(0,0,0,.5)}
+.card.dark p{color:rgba(201,163,92,.6)}
+.card.dark .meta span{border-color:rgba(201,163,92,.38);background:rgba(46,34,64,.7);color:#efe5d6;box-shadow:2px 2px 0 rgba(0,0,0,.35)}
+.card.dark .go{color:#d8b979}
+.card.dark .go::before{background:#c9a35c}
+.card.dark .art{filter:drop-shadow(0 10px 18px rgba(201,163,92,.28))}
 
-/* foot */
-.foot{margin-top:34px;text-align:center;font-size:11.5px;color:var(--muted);line-height:1.9}
-.foot span{display:block;margin-top:6px;letter-spacing:.2em;color:rgba(163,148,179,.6);font-size:10px}
+/* 速测票根 */
+.speed{display:flex;gap:10px;margin-top:4px}
+.speed a{flex:1;position:relative;text-align:center;text-decoration:none;color:#5d4a6e;font-size:11.5px;font-weight:800;
+  padding:13px 8px;background:#fffdfa;border:1px dashed rgba(93,74,110,.3);border-radius:2px;
+  box-shadow:3px 3px 0 rgba(93,74,110,.12);letter-spacing:.04em}
+.speed a b{display:block;font-size:8px;letter-spacing:.28em;color:#b07ab5;margin-bottom:3px}
+.rule{margin:26px 0 14px;display:flex;align-items:center;gap:10px;color:rgba(93,74,110,.4);font-size:8px;letter-spacing:.3em}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:repeating-linear-gradient(90deg,rgba(93,74,110,.3) 0 4px,transparent 4px 9px)}
+.foot{text-align:center;font-size:10px;color:var(--muted);line-height:1.9}
+.foot b{display:block;font-size:8px;letter-spacing:.3em;color:rgba(93,74,110,.4);margin-top:8px;font-weight:700}
+@media(max-width:380px){.side{display:none}.mast{padding:30px 14px 22px 18px}.card{padding:26px 14px 16px}.art{width:52px;height:52px;opacity:.8}}
 </style>
 </head>
 <body>
 <div class="app">
 
-  <div class="head">
-    <div class="kicker">QUIZ ARCHIVE</div>
-    <h1>你比自己以为的<br>更有意思</h1>
+  <div class="ticker"><div class="tick"><span>QUIZ ARCHIVE · 2 TESTS · 8 PICTURES · 36 QUESTIONS · </span><span>QUIZ ARCHIVE · 2 TESTS · 8 PICTURES · 36 QUESTIONS · </span></div></div>
+
+  <div class="mast">
+    <div class="frame"><i></i><i></i><i></i><i></i></div>
+    <span class="side">VOL.01 — QUIZ ARCHIVE</span>
+    <span class="stamp">2<small>ISSUES</small></span>
+    <div class="kicker">PSYCHOLOGY · ENTERTAINMENT</div>
+    <h1>你比自己<br>以为的<em>更有意思</em></h1>
     <div class="sub">两个测试 · 八种画像 · 测完只想说这也太准了</div>
   </div>
 
   <a class="card" href="opposite-sex-quiz.html">
-    <svg class="art" viewBox="0 0 100 100" aria-hidden="true">
-      <defs>
-        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#e88ba0"/><stop offset="1" stop-color="#8a7bb8"/>
-        </linearGradient>
-      </defs>
-      <circle cx="50" cy="40" r="26" fill="url(#g1)" opacity=".22"/>
-      <circle cx="50" cy="40" r="26" fill="none" stroke="url(#g1)" stroke-width="3"/>
-      <circle cx="50" cy="40" r="17" fill="#fff" opacity=".9"/>
-      <circle cx="43" cy="33" r="5" fill="#fff"/>
-      <path d="M50 66 L50 84" stroke="url(#g1)" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="50" cy="88" r="5" fill="url(#g1)" opacity=".7"/>
-    </svg>
-    <div class="no">NO.01</div>
+    <span class="corner"></span>
+    <span class="tidx">01</span>
+    <div class="no">NO.01 — MIRROR TEST</div>
     <h2>测测你在异性眼里<br>是什么样子</h2>
     <p>不问你觉得自己好看吗，而是让别人替你回答。18 个情境题，还原你在异性眼里的真实魅力画像。</p>
     <div class="meta"><span>18 道题</span><span>约 3 分钟</span><span>8 种魅力类型</span></div>
-    <div class="go"><i></i>开始照镜子</div>
+    <div class="go">开始照镜子</div>
+    <svg class="art" viewBox="0 0 100 100" aria-hidden="true">
+      <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e88ba0"/><stop offset="1" stop-color="#8a7bb8"/></linearGradient></defs>
+      <circle cx="50" cy="38" r="24" fill="url(#g1)" opacity=".22"/>
+      <circle cx="50" cy="38" r="24" fill="none" stroke="url(#g1)" stroke-width="2.5"/>
+      <circle cx="50" cy="38" r="16" fill="#fff" opacity=".92"/>
+      <circle cx="43" cy="31" r="4.5" fill="#fff"/>
+      <path d="M50 62 L50 80" stroke="url(#g1)" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="50" cy="85" r="4.5" fill="url(#g1)" opacity=".7"/>
+    </svg>
   </a>
 
   <a class="card dark" href="hidden-attraction-quiz.html">
-    <svg class="art" viewBox="0 0 100 100" aria-hidden="true">
-      <defs>
-        <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#c9a35c"/><stop offset="1" stop-color="#e88ba0"/>
-        </linearGradient>
-      </defs>
-      <rect x="30" y="46" width="40" height="34" rx="9" fill="url(#g2)" opacity=".28"/>
-      <rect x="30" y="46" width="40" height="34" rx="9" fill="none" stroke="url(#g2)" stroke-width="3"/>
-      <path d="M38 46 V36 a12 12 0 0 1 24 0 V46" fill="none" stroke="url(#g2)" stroke-width="3" stroke-linecap="round"/>
-      <path d="M50 57 c4-4 8-1 8 3 c0 4-8 8-8 8 c0 0-8-4-8-8 c0-4 4-7 8-3 z" fill="url(#g2)" opacity=".85"/>
-    </svg>
-    <div class="no">NO.02</div>
+    <span class="corner"></span>
+    <span class="tidx">02</span>
+    <div class="no">NO.02 — ATTRACTION ARCHIVE</div>
     <h2>测测你隐藏的<br>亲密吸引力类型</h2>
     <p>你需要的不是爱，而是被读懂。测你在亲密关系里真正想要什么、雷区在哪、该怎么开口。</p>
     <div class="meta"><span>18 道题</span><span>约 3 分钟</span><span>8 种亲密类型</span></div>
-    <div class="go"><i></i>打开档案</div>
+    <div class="go">打开档案</div>
+    <svg class="art" viewBox="0 0 100 100" aria-hidden="true">
+      <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9a35c"/><stop offset="1" stop-color="#e88ba0"/></linearGradient></defs>
+      <rect x="30" y="46" width="40" height="32" rx="8" fill="url(#g2)" opacity=".28"/>
+      <rect x="30" y="46" width="40" height="32" rx="8" fill="none" stroke="url(#g2)" stroke-width="2.5"/>
+      <path d="M38 46 V36 a12 12 0 0 1 24 0 V46" fill="none" stroke="url(#g2)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M50 56 c4-4 8-1 8 3 c0 4-8 8-8 8 c0 0-8-4-8-8 c0-4 4-7 8-3 z" fill="url(#g2)" opacity=".9"/>
+    </svg>
   </a>
 
   <div class="speed">
@@ -126,8 +160,11 @@ h1{position:relative;margin:0;font-size:clamp(30px,8.4vw,42px);line-height:1.3;f
     <a href="hidden-attraction-quiz-8.html"><b>SPEED</b>亲密吸引力 · 8 题</a>
   </div>
 
+  <div class="rule">END OF ISSUE</div>
+
   <div class="foot">
-    娱乐向，结果仅供参考<span>© QUIZ ARCHIVE</span>
+    娱乐向，结果仅供参考，你比任何画像都更丰富
+    <b>PRINTED IN 2026 · QUIZ ARCHIVE</b>
   </div>
 
 </div>
