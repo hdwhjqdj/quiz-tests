@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>测测你在异性眼里是什么样子 · 8题速测</title>
+<style>
+:root{--bg:#fff5f8;--card:#fff;--ink:#4a3a5c;--ink2:#5d4a6e;--muted:#a89bb8;--line:#f0e4ec;--rose:#d96b8a;--violet:#8a7bb8;--silver:#c8c2d4}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:radial-gradient(800px 500px at 50% -10%,#fdeaf1 0%,rgba(253,234,241,0) 60%),repeating-linear-gradient(90deg,rgba(217,107,138,.025) 0 1px,transparent 1px 40px),var(--bg);color:var(--ink2);font-family:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.app{max-width:520px;margin:0 auto;padding:calc(24px + env(safe-area-inset-top)) 16px calc(32px + env(safe-area-inset-bottom))}
+.screen{display:none}.screen.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cover{text-align:center}
+.kicker{font-size:11px;letter-spacing:.4em;color:var(--rose);font-weight:800;margin-bottom:10px}
+.cover h1{margin:0;font-size:clamp(26px,8vw,36px);font-weight:900;color:var(--ink);letter-spacing:1px;line-height:1.2}
+.cover h1 em{font-style:normal;color:var(--rose)}
+.cover-sub{margin:10px 0 18px;font-size:13px;color:var(--muted)}
+.mirror-art{margin:6px auto 18px;width:220px;height:190px}
+.mirror-art svg{width:100%;height:100%}
+.cover-desc{font-size:13.5px;color:var(--ink2);margin:0 auto 18px;max-width:380px}
+.facts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.facts span{font-size:11px;padding:4px 10px;border:1px solid var(--line);border-radius:20px;background:var(--card);color:var(--muted)}
+.btn{display:block;width:100%;min-height:52px;border:none;border-radius:30px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit}
+.btn-primary{background:linear-gradient(135deg,var(--rose),var(--violet));color:#fff;box-shadow:0 8px 22px -8px rgba(217,107,138,.6)}
+.btn-outline{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.cover-note{margin-top:14px;font-size:11.5px;color:var(--muted)}
+.quiz-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.back{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);font-size:18px;color:var(--ink);cursor:pointer;flex-shrink:0}
+.progress{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--rose),var(--violet));width:0;transition:width .3s}
+.q-counter{font-size:12px;color:var(--muted);font-weight:800;min-width:42px;text-align:right}
+.q-card{background:var(--card);border-radius:16px;padding:22px 18px;box-shadow:0 8px 24px -14px rgba(138,123,184,.3);border:1px solid var(--line)}
+.q-eyebrow{font-size:11px;color:var(--violet);font-weight:800;letter-spacing:.2em;margin-bottom:8px}
+.q-text{font-size:17px;font-weight:700;color:var(--ink);line-height:1.5;margin:0 0 4px}
+.q-hint{font-size:12px;color:var(--muted);margin-bottom:18px}
+.opt{display:block;width:100%;text-align:left;padding:14px 16px;margin-bottom:10px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;font-size:14.5px;color:var(--ink2);cursor:pointer;font-family:inherit}
+.opt.sel{border-color:var(--rose);background:#fdf0f5}
+.opt .k{display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;background:#f3eaf0;color:var(--ink);font-weight:800;font-size:12px;margin-right:10px}
+.opt.sel .k{background:var(--rose);color:#fff}
+.loading{text-align:center;padding:60px 20px}
+.load-emblem{width:110px;height:110px;margin:0 auto 20px;animation:float 2.4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.loading h2{color:var(--ink);margin:0 0 8px}.loading p{color:var(--muted);font-size:13px}
+.result .hero{background:linear-gradient(135deg,#fff,#fdf0f5);border-radius:18px;padding:24px 20px;box-shadow:0 12px 32px -16px rgba(217,107,138,.4);border:1px solid var(--line);position:relative;overflow:hidden}
+.result .hero::after{content:"";position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;background:radial-gradient(circle,rgba(138,123,184,.15),transparent 70%);border-radius:50%}
+.type-no{font-size:11px;letter-spacing:.3em;color:var(--violet);font-weight:800}
+.type-cn{font-size:30px;font-weight:900;color:var(--ink);margin:4px 0 2px}
+.type-title{font-size:14px;color:var(--rose);font-weight:700;margin-bottom:4px}
+.type-tag{font-size:13px;color:var(--muted)}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.chip{background:#f9f3f7;border-radius:10px;padding:10px 12px}
+.chip .l{font-size:10.5px;color:var(--muted);font-weight:700}.chip .v{font-size:13px;color:var(--ink);font-weight:800;margin-top:2px}
+.section{margin-top:18px}
+.section h3{font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--rose);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.section h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.prose{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.8;color:var(--ink2)}
+.idx-row{display:flex;align-items:center;gap:10px;padding:6px 0}
+.idx-row .l{width:76px;font-size:12.5px;color:var(--ink);font-weight:700}
+.idx-bar{flex:1;height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.idx-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--rose),var(--violet));border-radius:5px}
+.idx-row .p{width:42px;text-align:right;font-size:12px;color:var(--muted);font-weight:800}
+.tag-list{display:flex;flex-wrap:wrap;gap:6px}
+.tag-list span{font-size:12px;padding:5px 12px;background:var(--rose);color:#fff;border-radius:16px;font-weight:700}
+.tag-list span.v{background:var(--violet)}.tag-list span.s{background:var(--silver);color:var(--ink)}
+.rank .rrow{display:flex;align-items:center;gap:8px;padding:5px 0}
+.rank .rname{width:104px;font-size:12px;color:var(--ink2);font-weight:700}
+.rank .rbar{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.rank .rbar i{display:block;height:100%;background:var(--violet);border-radius:4px}
+.rank .rrow.top .rname{color:var(--rose)}.rank .rrow.top .rbar i{background:var(--rose)}
+.rank .rp{width:38px;text-align:right;font-size:11.5px;color:var(--muted);font-weight:800}
+.guide{list-style:none;margin:0;padding:0;counter-reset:g}
+.guide li{counter-increment:g;padding:8px 0 8px 30px;font-size:13.5px;color:var(--ink2);border-bottom:1px dashed var(--line);position:relative}
+.guide li::before{content:counter(g);position:absolute;left:0;top:8px;width:22px;height:22px;background:var(--violet);color:#fff;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:800}
+.guide li:last-child{border-bottom:none}
+.actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.actions .btn{flex:1;min-width:130px}
+.share-text{margin-top:14px;background:#f9f3f7;border-radius:10px;padding:12px;font-size:12.5px;color:var(--ink2);line-height:1.7}
+.disclaimer{margin-top:16px;font-size:11px;color:var(--muted);text-align:center}
+.cross-link{text-align:center;margin-top:16px}
+.cross-link a{color:var(--rose);font-size:13px;text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+<div class="app">
+<section id="screen-cover" class="screen on">
+  <div class="cover">
+    <div class="kicker">MIRROR TEST · 速测版</div>
+    <h1>测测你在<em>异性眼里</em><br>是什么样子</h1>
+    <div class="cover-sub">8 题快速出画像</div>
+    <div class="mirror-art">
+<svg viewBox="0 0 230 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="mg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fdeaf1"/><stop offset="1" stop-color="#e8e0f5"/></linearGradient></defs>
+  <ellipse cx="115" cy="105" rx="72" ry="86" fill="#fff" stroke="#d96b8a" stroke-width="3"/>
+  <ellipse cx="115" cy="105" rx="58" ry="72" fill="url(#mg2)"/>
+  <ellipse cx="96" cy="78" rx="14" ry="16" fill="#d96b8a" opacity=".55"/>
+  <path d="M72 120 Q115 100 158 120 L158 150 Q115 142 72 150 Z" fill="#8a7bb8" opacity=".5"/>
+  <ellipse cx="108" cy="78" rx="4" ry="5" fill="#4a3a5c"/><ellipse cx="122" cy="78" rx="4" ry="5" fill="#4a3a5c"/>
+  <path d="M107 90 Q115 96 123 90" stroke="#4a3a5c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M44 160 L115 178 L186 160" stroke="#c9b8d8" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="60" cy="50" r="3" fill="#f5b8a8"/><circle cx="175" cy="55" r="2.5" fill="#d96b8a"/><circle cx="180" cy="130" r="2" fill="#8a7bb8"/>
+</svg>
+    </div>
+    <p class="cover-desc">8 道情境题，快速还原异性眼里的你。</p>
+    <div class="facts"><span>8 道题</span><span>约 1 分钟</span><span>8 种画像</span></div>
+    <button class="btn btn-primary" id="startBtn">照照这面镜子</button>
+    <div class="cross-link" style="margin-top:14px"><a href="opposite-sex-quiz.html">想看完整版？18 题详细画像 →</a></div>
+    <p class="cover-note">娱乐向 · 印象仅供参考，你比任何画像都更丰富</p>
+  </div>
+</section>
+<section id="screen-quiz" class="screen">
+  <div class="quiz-top">
+    <button class="back" id="backBtn">←</button>
+    <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="q-counter"><span id="qNow">1</span> / <span id="qTotal">8</span></div>
+  </div>
+  <div class="q-card">
+    <div class="q-eyebrow" id="qEyebrow">MIRROR 01</div>
+    <h2 class="q-text" id="qText"></h2>
+    <div class="q-hint">按第一反应选</div>
+    <div id="opts"></div>
+  </div>
+</section>
+<section id="screen-loading" class="screen">
+  <div class="loading">
+    <svg class="load-emblem" viewBox="0 0 110 110" fill="none">
+      <ellipse cx="55" cy="55" rx="36" ry="44" fill="#fff" stroke="#d96b8a" stroke-width="2.5"/>
+      <circle cx="55" cy="50" r="14" fill="#fdeaf1"/><path d="M38 70 Q55 60 72 70 L72 86 Q55 80 38 86 Z" fill="#e8e0f5"/>
+    </svg>
+    <h2>正在擦干净这面镜子…</h2>
+    <p>你的异性印象画像即将显现</p>
+  </div>
+</section>
+<section id="screen-result" class="screen">
+  <div id="resultRoot"></div>
+  <div class="actions">
+    <button class="btn btn-primary" id="restartBtn">再照一次</button>
+    <button class="btn btn-outline" id="shareBtn">复制我的画像</button>
+  </div>
+  <div class="actions"><button class="btn btn-outline" id="backQBtn">回到最后一题修改</button></div>
+  <div id="shareText" class="share-text" style="display:none"></div>
+  <div class="cross-link"><a href="opposite-sex-quiz.html">想看完整版？18 题详细画像 →</a></div>
+  <p class="disclaimer">娱乐向 · 印象仅供参考，不构成任何评价</p>
+</section>
+</div>
+<script>
+var ORDER=['cool','sunny','warm','sharp','cute','mystery','funny','grace'];
+var TYPES={
+ cool:{no:'01',cn:'清冷高岭之花',title:'高冷系 · 距离感即魅力',tagline:'越难接近越让人想靠近',first:'你在异性眼里像一朵开在悬崖上的花，好看但有距离。你不是故意冷，只是不擅长安全感外露。异性第一眼看你会觉得"ta 应该不好追"，但熟了之后会发现你其实很暖。',tags:['高冷','有距离','耐看','专一'],idx:{attract:88,warm:35,fun:45},tips:['不用为了显得亲切而勉强自己笑','你的距离感本身就是魅力','给喜欢的人一点点信号，别让 ta 以为你讨厌 ta']},
+ sunny:{no:'02',cn:'阳光元气型',title:'小太阳 · 走到哪亮到哪',tagline:'你就是异性眼里的好心情',first:'你在异性眼里是自带暖光的小太阳。跟你在一起不会无聊，你总能把气氛带起来。异性喜欢你的真诚和不做作，跟你相处没有压力。',tags:['开朗','元气','真诚','好相处'],idx:{attract:82,warm:90,fun:88},tips:['你的热情是优点，但偶尔也要给对方留空间','别总当照顾别人的那个人，也让别人照顾你','累了就说累，不用一直元气满满']},
+ warm:{no:'03',cn:'温柔治愈型',title:'治愈系 · 天生让人卸下防备',tagline:'你是异性疲惫时想靠岸的港湾',first:'你在异性眼里是温柔本身。你的体贴不是刻意的，是骨子里的善良。异性跟你说话会不自觉放松，愿意把脆弱给你看。',tags:['温柔','体贴','共情','治愈'],idx:{attract:85,warm:98,fun:60},tips:['别让温柔变成没有边界的讨好','你的好要给值得的人','偶尔"不好相处"一点，反而更有魅力']},
+ sharp:{no:'04',cn:'飒爽攻气型',title:'直球系 · 又飒又有主见',tagline:'你一出场，异性的目光就跟着走',first:'你在异性眼里是又 A 又飒的存在。你有主见、有气场，不扭捏不矫情。异性对你是又欣赏又有点"怕"——怕自己 hold 不住你。',tags:['飒','有主见','独立','直球'],idx:{attract:92,warm:50,fun:65},tips:['你的强势很迷人，但偶尔示弱会更可爱','不是所有人都能跟上你的节奏，别勉强','喜欢你的人会追上来，不用回头']},
+ cute:{no:'05',cn:'呆萌可爱型',title:'治愈系 · 让人想rua',tagline:'异性看到你就想保护你',first:'你在异性眼里是天然呆的小可爱。你可能自己没觉得，但你不经意的反应和表情会让异性觉得"好可爱"。你不刻意卖萌，你的可爱是真实的。',tags:['呆萌','可爱','天然','保护欲'],idx:{attract:80,warm:78,fun:72},tips:['可爱是你的武器，但别只用可爱','你比你以为的更有魅力','别为了装可爱丢掉真实的自己']},
+ mystery:{no:'06',cn:'神秘疏离型',title:'谜系 · 越猜越上瘾',tagline:'异性看你像一本读不完的书',first:'你在异性眼里是谜一样的存在。你不轻易暴露自己，越是这样异性越想了解你。你的疏离不是冷漠，是你需要时间信任一个人。',tags:['神秘','疏离','有深度','让人好奇'],idx:{attract:86,warm:40,fun:48},tips:['保持神秘可以，但别让喜欢的人等太久','偶尔主动一点点，会有意想不到的效果','你的疏离可能会让人误以为你讨厌 ta']},
+ funny:{no:'07',cn:'搞笑憨憨型',title:'快乐喷泉 · 有你在就有笑声',tagline:'异性跟你在一起永远不会无聊',first:'你在异性眼里是快乐源泉。你自带幽默感，随口一句就能把人逗笑。异性喜欢跟你待在一起，因为舒服、自在、没有包袱。',tags:['搞笑','憨憨','有趣','好相处'],idx:{attract:78,warm:82,fun:96},tips:['有趣是你的魅力，但偶尔认真一下会更迷人','别总用搞笑掩饰真实情绪','喜欢你的人会喜欢你的全部，包括不搞笑的你']},
+ grace:{no:'08',cn:'知性优雅型',title:'气质系 · 越品越有味道',tagline:'异性看你像一杯红酒，越久越醇',first:'你在异性眼里是有气质、有内涵的存在。你不张扬，但你的谈吐和举止会让人不自觉被吸引。异性喜欢你的分寸感和品味。',tags:['知性','优雅','有品味','耐看'],idx:{attract:90,warm:70,fun:55},tips:['你的气质是长久魅力，不用急着证明','偶尔放下优雅，展现真实的一面','别对自己太苛刻，你已经很好了']}
+};
+var QUESTIONS=[
+ {e:'MIRROR 01',t:'你第一次和有好感的异性见面，你会？',o:[{t:'sunny',v:3,text:'主动聊天破冰'},{t:'mystery',v:3,text:'安静微笑观察'},{t:'funny',v:3,text:'讲个冷笑话'},{t:'warm',v:3,text:'认真听对方说话'}]},
+ {e:'MIRROR 02',t:'异性朋友说你给人的第一印象是？',o:[{t:'cool',v:3,text:'有点冷，不好接近'},{t:'warm',v:3,text:'笑起来很暖'},{t:'sharp',v:3,text:'很有气场'},{t:'cute',v:3,text:'呆呆的很可爱'}]},
+ {e:'MIRROR 03',t:'你在异性面前最常做的事是？',o:[{t:'warm',v:3,text:'照顾对方感受'},{t:'funny',v:3,text:'讲段子活跃气氛'},{t:'mystery',v:3,text:'保持距离观察'},{t:'sharp',v:3,text:'直接表达想法'}]},
+ {e:'MIRROR 04',t:'你觉得自己最吸引异性的是？',o:[{t:'grace',v:3,text:'外貌气质'},{t:'funny',v:3,text:'性格有趣'},{t:'warm',v:3,text:'温柔体贴'},{t:'sharp',v:3,text:'独立有主见'}]},
+ {e:'MIRROR 05',t:'异性跟你倾诉烦恼，你会？',o:[{t:'grace',v:3,text:'认真听给建议'},{t:'warm',v:3,text:'共情安慰'},{t:'funny',v:3,text:'讲个笑话让 ta 开心'},{t:'sharp',v:3,text:'直接说"这有什么好烦恼的"'}]},
+ {e:'MIRROR 06',t:'你在异性面前会刻意？',o:[{t:'grace',v:3,text:'保持形象'},{t:'funny',v:3,text:'展现幽默'},{t:'warm',v:3,text:'释放善意'},{t:'cool',v:3,text:'端着'}]},
+ {e:'MIRROR 07',t:'你和异性相处最舒服的方式是？',o:[{t:'mystery',v:3,text:'各干各的不说话'},{t:'sunny',v:3,text:'一起玩一起闹'},{t:'grace',v:3,text:'深度聊天'},{t:'warm',v:3,text:'互相照顾'}]},
+ {e:'MIRROR 08',t:'如果异性用一种食物形容你，你希望是？',o:[{t:'cool',v:3,text:'冰美式（苦但上头）'},{t:'warm',v:3,text:'热可可（暖心）'},{t:'funny',v:3,text:'跳跳糖（有趣）'},{t:'grace',v:3,text:'红酒（越品越有味道）'}]}
+];
+var APPEAR={};QUESTIONS.forEach(function(q){q.o.forEach(function(op){APPEAR[op.t]=(APPEAR[op.t]||0)+1})});
+var total=QUESTIONS.length,cur=0,answers=[],locked=false;
+function $(id){return document.getElementById(id)}
+function showScreen(n){['cover','quiz','loading','result'].forEach(function(s){$('screen-'+s).classList.toggle('on',s===n)});window.scrollTo(0,0)}
+function renderQuestion(){var q=QUESTIONS[cur];$('qEyebrow').textContent='MIRROR '+String(cur+1).padStart(2,'0');$('qText').textContent=q.t;$('qNow').textContent=cur+1;$('qTotal').textContent=total;$('progressFill').style.width=((cur)/total*100)+'%';var wrap=$('opts');wrap.innerHTML='';q.o.forEach(function(op,i){var b=document.createElement('button');b.className='opt'+(answers[cur]===i?' sel':'');b.innerHTML='<span class="k">'+String.fromCharCode(65+i)+'</span>'+op.text;b.onclick=function(){choose(i)};wrap.appendChild(b)})}
+function choose(i){if(locked)return;locked=true;answers[cur]=i;var opts=document.querySelectorAll('.opt');opts.forEach(function(o){o.classList.remove('sel')});if(opts[i])opts[i].classList.add('sel');setTimeout(function(){locked=false;if(cur<total-1){cur++;renderQuestion()}else{askOracle()}},260)}
+function askOracle(){showScreen('loading');setTimeout(function(){var res=calc(answers);renderResult(res);showScreen('result')},720)}
+function calc(ans){var scores={};ORDER.forEach(function(k){scores[k]=0});ans.forEach(function(ai,i){if(ai==null)return;var op=QUESTIONS[i].o[ai];scores[op.t]+=op.v});var best=ORDER[0];ORDER.forEach(function(k){var r=scores[k]/((APPEAR[k]||1)*3),b=scores[best]/((APPEAR[best]||1)*3);if(r>b)best=k});return{key:best,scores:scores}}
+function renderResult(res){var t=TYPES[res.key];var rows=ORDER.map(function(k){var max=(APPEAR[k]||1)*3;var pct=Math.round((res.scores[k]||0)/max*100);return{k:k,t:TYPES[k],pct:pct}});rows.sort(function(a,b){return b.pct-a.pct});var topKey=rows[0].k;
+var tags=t.tags.map(function(tag,i){return '<span class="'+(i%3===1?'v':(i%3===2?'s':''))+'">'+tag+'</span>'}).join('');
+var html='<div class="result"><div class="hero"><div class="type-no">NO.'+t.no+' · 异性印象</div><h1 class="type-cn">'+t.cn+'</h1><div class="type-title">'+t.title+'</div><div class="type-tag">'+t.tagline+'</div></div>';
+html+='<div class="chips"><div class="chip"><div class="l">魅力值</div><div class="v">'+t.idx.attract+'</div></div><div class="chip"><div class="l">温暖值</div><div class="v">'+t.idx.warm+'</div></div></div>';
+html+='<div class="section"><h3>异性眼里的你</h3><div class="prose">'+t.first+'</div></div>';
+html+='<div class="section"><h3>你的魅力标签</h3><div class="tag-list">'+tags+'</div></div>';
+html+='<div class="section"><h3>魅力画像</h3>';
+html+='<div class="idx-row"><div class="l">吸引力</div><div class="idx-bar"><i style="width:'+t.idx.attract+'%"></i></div><div class="p">'+t.idx.attract+'</div></div>';
+html+='<div class="idx-row"><div class="l">温暖值</div><div class="idx-bar"><i style="width:'+t.idx.warm+'%"></i></div><div class="p">'+t.idx.warm+'</div></div>';
+html+='<div class="idx-row"><div class="l">有趣值</div><div class="idx-bar"><i style="width:'+t.idx.fun+'%"></i></div><div class="p">'+t.idx.fun+'</div></div></div>';
+html+='<div class="section"><h3>魅力使用指南</h3><ul class="guide">';t.tips.forEach(function(g){html+='<li>'+g+'</li>'});html+='</ul></div>';
+html+='<div class="section"><h3>异性印象排行</h3><div class="rank">';rows.forEach(function(r){html+='<div class="rrow'+(r.k===topKey?' top':'')+'"><div class="rname">'+r.t.cn+'</div><div class="rbar"><i style="width:'+Math.max(r.pct,4)+'%"></i></div><div class="rp">'+r.pct+'</div></div>'});html+='</div></div></div>';
+$('resultRoot').innerHTML=html;
+var share='我在异性眼里是【'+t.cn+'】——'+t.tagline+'\n魅力标签：'+t.tags.join(' · ')+'\n来测测你在异性眼里是什么样子 →';
+$('shareText').textContent=share;$('shareText').dataset.share=share}
+$('startBtn').onclick=function(){cur=0;answers=[];renderQuestion();showScreen('quiz')};
+$('backBtn').onclick=function(){if(cur>0){cur--;renderQuestion()}};
+$('restartBtn').onclick=function(){cur=0;answers=[];showScreen('cover')};
+$('backQBtn').onclick=function(){cur=total-1;renderQuestion();showScreen('quiz')};
+$('shareBtn').onclick=function(){var txt=$('shareText').dataset.share||$('shareText').textContent;$('shareText').style.display='block';var btn=$('shareBtn');btn.textContent='分享文案已生成';var done=function(){btn.textContent='已复制';setTimeout(function(){btn.textContent='复制我的画像'},1800)};try{navigator.clipboard.writeText(txt).then(done,function(){window.prompt('复制下面的文案分享给朋友：',txt);btn.textContent='已复制';setTimeout(function(){btn.textContent='复制我的画像'},1800)})}catch(e){window.prompt('复制下面的文案分享给朋友：',txt);done()}};
+window.__quizTest={QUESTIONS:QUESTIONS,TYPES:TYPES,calc:calc,answers:function(){return answers.slice()}};
+</script>
+</body>
+</html>
