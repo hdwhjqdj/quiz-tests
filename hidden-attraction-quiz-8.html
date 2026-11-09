@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>测测你隐藏的亲密吸引力类型 · 8题速测 18+</title>
+<style>
+:root{--bg:#241a33;--bg2:#2e2240;--card:#3a2a4a;--ink:#f3eef7;--ink2:#d8cfe6;--muted:#9a8db0;--line:#4a3a5e;--gold:#c9a35c;--rose:#e88ba0;--plum:#7a4e8f}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:radial-gradient(800px 600px at 50% -10%,#3a2a4a 0%,rgba(58,42,74,0) 60%),repeating-linear-gradient(0deg,rgba(201,163,92,.03) 0 1px,transparent 1px 30px),var(--bg);color:var(--ink2);font-family:"PingFang SC","Hiragino Sans GB","Noto Serif SC","Microsoft YaHei",sans-serif;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.app{max-width:520px;margin:0 auto;padding:calc(24px + env(safe-area-inset-top)) 16px calc(32px + env(safe-area-inset-bottom))}
+.screen{display:none}.screen.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.age-badge{display:inline-block;font-size:10px;letter-spacing:.15em;padding:3px 10px;border:1px solid var(--gold);color:var(--gold);border-radius:4px;font-weight:800;margin-bottom:14px}
+.cover{text-align:center}
+.kicker{font-size:11px;letter-spacing:.4em;color:var(--rose);font-weight:800;margin-bottom:10px}
+.cover h1{margin:0;font-family:"Noto Serif SC","Source Han Serif SC","SimSun",serif;font-size:clamp(26px,8vw,36px);font-weight:900;color:var(--ink);letter-spacing:2px;line-height:1.2}
+.cover h1 em{font-style:normal;color:var(--gold)}
+.cover-sub{margin:10px 0 18px;font-size:13px;color:var(--muted)}
+.lock-art{margin:6px auto 18px;width:210px;height:190px}
+.lock-art svg{width:100%;height:100%}
+.cover-desc{font-size:13.5px;color:var(--ink2);margin:0 auto 18px;max-width:380px}
+.warn{font-size:11.5px;color:var(--gold);margin:0 auto 18px;max-width:380px;line-height:1.7}
+.facts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.facts span{font-size:11px;padding:4px 10px;border:1px solid var(--line);border-radius:20px;background:var(--card);color:var(--muted)}
+.btn{display:block;width:100%;min-height:52px;border:none;border-radius:30px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--rose));color:#241a33;box-shadow:0 8px 24px -8px rgba(201,163,92,.5)}
+.btn-outline{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.cover-note{margin-top:14px;font-size:11.5px;color:var(--muted)}
+.quiz-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.back{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);font-size:18px;color:var(--ink);cursor:pointer;flex-shrink:0}
+.progress{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--rose));width:0;transition:width .3s}
+.q-counter{font-size:12px;color:var(--muted);font-weight:800;min-width:42px;text-align:right}
+.q-card{background:var(--card);border-radius:16px;padding:22px 18px;box-shadow:0 8px 28px -14px rgba(0,0,0,.5);border:1px solid var(--line)}
+.q-eyebrow{font-size:11px;color:var(--gold);font-weight:800;letter-spacing:.2em;margin-bottom:8px}
+.q-text{font-size:17px;font-weight:700;color:var(--ink);line-height:1.5;margin:0 0 4px}
+.q-hint{font-size:12px;color:var(--muted);margin-bottom:18px}
+.opt{display:block;width:100%;text-align:left;padding:14px 16px;margin-bottom:10px;background:var(--bg2);border:1.5px solid var(--line);border-radius:14px;font-size:14.5px;color:var(--ink2);cursor:pointer;font-family:inherit}
+.opt.sel{border-color:var(--gold);background:#4a3655}
+.opt .k{display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;background:var(--line);color:var(--ink);font-weight:800;font-size:12px;margin-right:10px}
+.opt.sel .k{background:var(--gold);color:#241a33}
+.loading{text-align:center;padding:60px 20px}
+.load-emblem{width:110px;height:110px;margin:0 auto 20px;animation:float 2.4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.loading h2{color:var(--ink);margin:0 0 8px;font-family:"Noto Serif SC",serif}.loading p{color:var(--muted);font-size:13px}
+.result .hero{background:linear-gradient(135deg,#3a2a4a,#2e2240);border:1px solid var(--gold);border-radius:18px;padding:24px 20px;box-shadow:0 12px 36px -16px rgba(201,163,92,.4);position:relative;overflow:hidden}
+.result .hero::after{content:"";position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;background:radial-gradient(circle,rgba(201,163,92,.18),transparent 70%);border-radius:50%}
+.type-no{font-size:11px;letter-spacing:.3em;color:var(--gold);font-weight:800}
+.type-cn{font-family:"Noto Serif SC","Source Han Serif SC","SimSun",serif;font-size:30px;font-weight:900;color:var(--ink);margin:4px 0 2px;letter-spacing:2px}
+.type-title{font-size:14px;color:var(--rose);font-weight:700;margin-bottom:4px}
+.type-tag{font-size:13px;color:var(--muted)}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.chip{background:var(--bg2);border-radius:10px;padding:10px 12px;border:1px solid var(--line)}
+.chip .l{font-size:10.5px;color:var(--muted);font-weight:700}.chip .v{font-size:13px;color:var(--ink);font-weight:800;margin-top:2px}
+.section{margin-top:18px}
+.section h3{font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--gold);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.section h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.prose{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.85;color:var(--ink2)}
+.idx-row{display:flex;align-items:center;gap:10px;padding:6px 0}
+.idx-row .l{width:76px;font-size:12.5px;color:var(--ink);font-weight:700}
+.idx-bar{flex:1;height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.idx-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--rose));border-radius:5px}
+.idx-row .p{width:42px;text-align:right;font-size:12px;color:var(--muted);font-weight:800}
+.tag-list{display:flex;flex-wrap:wrap;gap:6px}
+.tag-list span{font-size:12px;padding:5px 12px;background:var(--gold);color:#241a33;border-radius:16px;font-weight:700}
+.tag-list span.v{background:var(--rose)}.tag-list span.s{background:var(--plum);color:var(--ink)}
+.note-card{background:#4a2f3a;border:1px dashed var(--rose);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--ink2);line-height:1.8}
+.guide{list-style:none;margin:0;padding:0;counter-reset:g}
+.guide li{counter-increment:g;padding:8px 0 8px 30px;font-size:13.5px;color:var(--ink2);border-bottom:1px dashed var(--line);position:relative}
+.guide li::before{content:counter(g);position:absolute;left:0;top:8px;width:22px;height:22px;background:var(--gold);color:#241a33;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:800}
+.guide li:last-child{border-bottom:none}
+.rank .rrow{display:flex;align-items:center;gap:8px;padding:5px 0}
+.rank .rname{width:96px;font-size:12px;color:var(--ink2);font-weight:700}
+.rank .rbar{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.rank .rbar i{display:block;height:100%;background:var(--plum);border-radius:4px}
+.rank .rrow.top .rname{color:var(--gold)}.rank .rrow.top .rbar i{background:var(--gold)}
+.rank .rp{width:38px;text-align:right;font-size:11.5px;color:var(--muted);font-weight:800}
+.actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.actions .btn{flex:1;min-width:130px}
+.share-text{margin-top:14px;background:var(--bg2);border-radius:10px;padding:12px;font-size:12.5px;color:var(--ink2);line-height:1.7}
+.disclaimer{margin-top:16px;font-size:11px;color:var(--muted);text-align:center;line-height:1.7}
+.cross-link{text-align:center;margin-top:16px}
+.cross-link a{color:var(--rose);font-size:13px;text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+<div class="app">
+<section id="screen-cover" class="screen on">
+  <div class="cover">
+    <span class="age-badge">18+ ADULT ONLY</span>
+    <div class="kicker">ATTRACTION ARCHIVE · 速测版</div>
+    <h1>测测你隐藏的<em>亲密吸引力</em><br>是什么类型</h1>
+    <div class="cover-sub">8 题快速出类型</div>
+    <div class="lock-art">
+<svg viewBox="0 0 220 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9a35c"/><stop offset="1" stop-color="#e88ba0"/></linearGradient></defs>
+  <rect x="60" y="90" width="100" height="80" rx="14" fill="#3a2a4a" stroke="url(#lg2)" stroke-width="3"/>
+  <path d="M78 90 V70 Q78 46 110 46 Q142 46 142 70 V90" stroke="url(#lg2)" stroke-width="3" fill="none"/>
+  <circle cx="110" cy="122" r="10" fill="url(#lg2)"/>
+  <line x1="110" y1="122" x2="110" y2="140" stroke="url(#lg2)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M96 122 Q110 110 124 122" stroke="url(#lg2)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
+  <circle cx="50" cy="60" r="2.5" fill="#c9a35c"/><circle cx="172" cy="70" r="2" fill="#e88ba0"/><circle cx="180" cy="130" r="2.5" fill="#c9a35c" opacity=".7"/>
+</svg>
+    </div>
+    <p class="cover-desc">8 道题，快速探索你在亲密关系里的隐藏吸引力类型。</p>
+    <p class="warn">⚠ 18+ 成人娱乐向，不含露骨内容。请在自愿、安全、互相尊重的前提下看待结果。</p>
+    <div class="facts"><span>8 道题</span><span>约 1 分钟</span><span>8 种类型</span></div>
+    <button class="btn btn-primary" id="startBtn">开启你的档案</button>
+    <div class="cross-link" style="margin-top:14px"><a href="hidden-attraction-quiz.html">想看完整版？18 题详细档案 →</a></div>
+    <p class="cover-note">娱乐向 · 仅用于自我探索，不构成任何建议</p>
+  </div>
+</section>
+<section id="screen-quiz" class="screen">
+  <div class="quiz-top">
+    <button class="back" id="backBtn">←</button>
+    <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="q-counter"><span id="qNow">1</span> / <span id="qTotal">8</span></div>
+  </div>
+  <div class="q-card">
+    <div class="q-eyebrow" id="qEyebrow">ARCHIVE 01</div>
+    <h2 class="q-text" id="qText"></h2>
+    <div class="q-hint">按真实感受选，没有对错</div>
+    <div id="opts"></div>
+  </div>
+</section>
+<section id="screen-loading" class="screen">
+  <div class="loading">
+    <svg class="load-emblem" viewBox="0 0 110 110" fill="none">
+      <rect x="30" y="48" width="50" height="40" rx="8" fill="#3a2a4a" stroke="#c9a35c" stroke-width="2.5"/>
+      <path d="M38 48 V38 Q38 24 55 24 Q72 24 72 38 V48" stroke="#c9a35c" stroke-width="2.5" fill="none"/>
+      <circle cx="55" cy="66" r="5" fill="#c9a35c"/>
+    </svg>
+    <h2>正在解锁你的吸引力档案…</h2>
+    <p>你的隐藏类型即将显现</p>
+  </div>
+</section>
+<section id="screen-result" class="screen">
+  <div id="resultRoot"></div>
+  <div class="actions">
+    <button class="btn btn-primary" id="restartBtn">再测一次</button>
+    <button class="btn btn-outline" id="shareBtn">复制我的类型卡</button>
+  </div>
+  <div class="actions"><button class="btn btn-outline" id="backQBtn">回到最后一题修改</button></div>
+  <div id="shareText" class="share-text" style="display:none"></div>
+  <div class="cross-link"><a href="hidden-attraction-quiz.html">想看完整版？18 题详细档案 →</a></div>
+  <p class="disclaimer">18+ 成人娱乐向 · 仅用于自我探索<br>亲密关系应建立在自愿、安全、尊重与沟通之上</p>
+</section>
+</div>
+<script>
+var ORDER=['pure','dom','sub','romance','adventure','cling','sensory','mind'];
+var TYPES={
+ pure:{no:'01',cn:'纯爱精神型',title:'感情优先 · 慢热型',tagline:'先有联结，才有亲密',source:'对你而言，亲密一定建立在深厚的情感之上。你慢热、专一，不轻易打开自己，但一旦认定就全身心投入。',tags:['慢热','精神联结','专一','深情'],idx:{passion:55,intimacy:95,adventure:30},note:'你需要的是能走进你内心的人，而不是急于靠近你的人。',guide:['不用为了"跟上节奏"勉强自己，你的慢热是保护','明确告诉对方你的节奏，真正喜欢你的人会等','别把深情全部押在一个人身上，留点给自己']},
+ dom:{no:'02',cn:'主导保护型',title:'掌控系 · 保护欲驱动',tagline:'你喜欢说了算，也喜欢被需要',source:'在亲密关系里你天然想占据主动。你享受规划、保护、带领的感觉，也会因为对方的依赖而感到满足。',tags:['主导','保护欲','占有','担当'],idx:{passion:85,intimacy:70,adventure:65},note:'你的强大是魅力，但偶尔也要学会"放权"和示弱。',guide:['主导之前先确认对方是否享受被带领','别把保护变成控制，留空间给对方','偶尔让对方做一次主，你会有新发现']},
+ sub:{no:'03',cn:'臣服依赖型',title:'被带领系 · 温柔地交付',tagline:'你喜欢被安排，也喜欢被宠着',source:'在亲密关系里你更愿意交出主动权。你享受被照顾、被安排、被宠溺的感觉，这让你感到安全和放松。',tags:['依赖','被照顾','柔软','信任'],idx:{passion:60,intimacy:90,adventure:35},note:'你的柔软很珍贵，但要确保对方值得你的信任。',guide:['交付之前确认对方是值得托付的人','依赖不等于失去自我，保留你的底线','学会表达"我不想要"，这比"好"更重要']},
+ romance:{no:'04',cn:'浪漫仪式型',title:'氛围感 · 为心动而生',tagline:'你要的是被认真对待的感觉',source:'你对亲密的理解充满仪式感。一束花、一句情话、一个精心准备的夜晚，都能让你心动很久。',tags:['仪式感','浪漫','氛围感','情话'],idx:{passion:78,intimacy:82,adventure:55},note:'你的浪漫很美好，但别用"对方有没有做到"来衡量爱。',guide:['浪漫可以自己给自己，不必全指望对方','直接告诉对方你喜欢什么，别让 ta 猜','分清"没做到"和"没想到"，前者才值得在意']},
+ adventure:{no:'05',cn:'新鲜冒险型',title:'探索系 · 永远在试新',tagline:'你讨厌无聊，喜欢未知和刺激',source:'你对亲密关系的核心需求是新鲜感。你喜欢尝试、探索、打破常规，一成不变会让你窒息。',tags:['新鲜','冒险','刺激','探索'],idx:{passion:90,intimacy:50,adventure:98},note:'你的热情很迷人，但要小心新鲜感掩盖了真正的联结。',guide:['新鲜感可以创造，不必靠换人','找一个愿意和你一起"折腾"的人','偶尔安于平淡，你会发现另一种浪漫']},
+ cling:{no:'06',cn:'黏人依恋型',title:'安全感型 · 需要被填满',tagline:'你喜欢黏在一起，越近越安心',source:'你对亲密关系的核心需求是"在场感"。你喜欢肢体接触、喜欢随时联系、喜欢两个人腻在一起。',tags:['黏人','依恋','安全感','紧密'],idx:{passion:70,intimacy:95,adventure:25},note:'你的依恋很暖，但要小心"太黏"变成对方的压力。',guide:['把一部分安全感建立在自己身上，而不是全靠对方','明确告诉对方你需要什么，而不是默默期待','给对方独处的空间，也给自己独处的时间']},
+ sensory:{no:'07',cn:'感官细节型',title:'氛围系 · 被细节打动',tagline:'你在意触感、气味、氛围和温度',source:'你对亲密的感知非常细腻。一个拥抱的力度、对方身上的味道、灯光的色温，都会深深影响你的感受。',tags:['感官','细节','氛围','细腻'],idx:{passion:72,intimacy:80,adventure:50},note:'你的细腻是天赋，但也容易因为细节不到位而失望。',guide:['直接告诉对方什么细节让你舒服，别让 ta 猜','别因为一个细节否定全部的好','学会表达你的"被打动"，对方会更愿意给你']},
+ mind:{no:'08',cn:'智性精神型',title:'灵魂系 · 先聊得来才心动',tagline:'能让你上头的，是思想的碰撞',source:'对你而言，最强烈的吸引力来自精神层面。一个能跟你深度对话、理解你想法的人，比任何外在条件都让你心动。',tags:['智性','精神','深度','灵魂'],idx:{passion:60,intimacy:85,adventure:40},note:'你的要求不低，但一旦遇到就是棋逢对手。',guide:['别用"聊不来"一票否决，有些人慢热','给对方展示思想的机会，而不只是看第一印象','灵魂共振之外，也要看看现实是否匹配']}
+};
+var QUESTIONS=[
+ {e:'ARCHIVE 01',t:'深夜和喜欢的人独处，你更想？',o:[{t:'romance',v:3,text:'聊到天亮，说很多心里话'},{t:'cling',v:3,text:'靠在一起，什么都不说'},{t:'mind',v:3,text:'讨论一个我们都感兴趣的话题'},{t:'adventure',v:3,text:'做点没做过的有趣的事'}]},
+ {e:'ARCHIVE 02',t:'你最在意亲密关系里的？',o:[{t:'pure',v:3,text:'对方是否真的懂我'},{t:'dom',v:3,text:'我能不能掌控节奏'},{t:'sub',v:3,text:'对方能不能让我安心依靠'},{t:'romance',v:3,text:'有没有浪漫和仪式感'}]},
+ {e:'ARCHIVE 03',t:'让你心动的瞬间是？',o:[{t:'sensory',v:3,text:'对方身上好闻的味道'},{t:'romance',v:3,text:'一句说到心坎的情话'},{t:'mind',v:3,text:'ta 说出了你没说出口的想法'},{t:'cling',v:3,text:'ta 自然地牵住你的手'}]},
+ {e:'ARCHIVE 04',t:'面对一段新关系，你通常？',o:[{t:'pure',v:3,text:'慢慢来，先了解再说'},{t:'adventure',v:3,text:'试试看，不行再换'},{t:'sub',v:3,text:'看对方怎么带节奏'},{t:'dom',v:3,text:'我来定我们的进度'}]},
+ {e:'ARCHIVE 05',t:'你在亲密关系里最怕？',o:[{t:'cling',v:3,text:'被冷落、被忽略'},{t:'mind',v:3,text:'聊不到一起去'},{t:'adventure',v:3,text:'一成不变、无聊'},{t:'pure',v:3,text:'对方不是真心'}]},
+ {e:'ARCHIVE 06',t:'你觉得亲密关系里最重要的是？',o:[{t:'romance',v:3,text:'浪漫和仪式感'},{t:'adventure',v:3,text:'新鲜感和共同体验'},{t:'mind',v:3,text:'精神上的共鸣'},{t:'pure',v:3,text:'彼此的真心和忠诚'}]},
+ {e:'ARCHIVE 07',t:'你会因为什么而爱上一个人？',o:[{t:'mind',v:3,text:'ta 的思想和才华'},{t:'cling',v:3,text:'ta 对你的依赖和需要'},{t:'pure',v:3,text:'ta 的真诚和善良'},{t:'sensory',v:3,text:'ta 给你的感觉和氛围'}]},
+ {e:'ARCHIVE 08',t:'如果用一个词形容你在亲密里的样子，你选？',o:[{t:'dom',v:3,text:'主导'},{t:'sub',v:3,text:'交付'},{t:'romance',v:3,text:'浪漫'},{t:'mind',v:3,text:'同频'}]}
+];
+var APPEAR={};QUESTIONS.forEach(function(q){q.o.forEach(function(op){APPEAR[op.t]=(APPEAR[op.t]||0)+1})});
+var total=QUESTIONS.length,cur=0,answers=[],locked=false;
+function $(id){return document.getElementById(id)}
+function showScreen(n){['cover','quiz','loading','result'].forEach(function(s){$('screen-'+s).classList.toggle('on',s===n)});window.scrollTo(0,0)}
+function renderQuestion(){var q=QUESTIONS[cur];$('qEyebrow').textContent='ARCHIVE '+String(cur+1).padStart(2,'0');$('qText').textContent=q.t;$('qNow').textContent=cur+1;$('qTotal').textContent=total;$('progressFill').style.width=((cur)/total*100)+'%';var wrap=$('opts');wrap.innerHTML='';q.o.forEach(function(op,i){var b=document.createElement('button');b.className='opt'+(answers[cur]===i?' sel':'');b.innerHTML='<span class="k">'+String.fromCharCode(65+i)+'</span>'+op.text;b.onclick=function(){choose(i)};wrap.appendChild(b)})}
+function choose(i){if(locked)return;locked=true;answers[cur]=i;var opts=document.querySelectorAll('.opt');opts.forEach(function(o){o.classList.remove('sel')});if(opts[i])opts[i].classList.add('sel');setTimeout(function(){locked=false;if(cur<total-1){cur++;renderQuestion()}else{askOracle()}},260)}
+function askOracle(){showScreen('loading');setTimeout(function(){var res=calc(answers);renderResult(res);showScreen('result')},720)}
+function calc(ans){var scores={};ORDER.forEach(function(k){scores[k]=0});ans.forEach(function(ai,i){if(ai==null)return;var op=QUESTIONS[i].o[ai];scores[op.t]+=op.v});var best=ORDER[0];ORDER.forEach(function(k){var r=scores[k]/((APPEAR[k]||1)*3),b=scores[best]/((APPEAR[best]||1)*3);if(r>b)best=k});return{key:best,scores:scores}}
+function renderResult(res){var t=TYPES[res.key];var rows=ORDER.map(function(k){var max=(APPEAR[k]||1)*3;var pct=Math.round((res.scores[k]||0)/max*100);return{k:k,t:TYPES[k],pct:pct}});rows.sort(function(a,b){return b.pct-a.pct});var topKey=rows[0].k;
+var tags=t.tags.map(function(tag,i){return '<span class="'+(i%3===1?'v':(i%3===2?'s':''))+'">'+tag+'</span>'}).join('');
+var html='<div class="result"><div class="hero"><div class="type-no">NO.'+t.no+' · 亲密吸引力类型</div><h1 class="type-cn">'+t.cn+'</h1><div class="type-title">'+t.title+'</div><div class="type-tag">'+t.tagline+'</div></div>';
+html+='<div class="chips"><div class="chip"><div class="l">激情值</div><div class="v">'+t.idx.passion+'</div></div><div class="chip"><div class="l">亲密度</div><div class="v">'+t.idx.intimacy+'</div></div></div>';
+html+='<div class="section"><h3>你的吸引力来源</h3><div class="prose">'+t.source+'</div></div>';
+html+='<div class="section"><h3>你的关键词</h3><div class="tag-list">'+tags+'</div></div>';
+html+='<div class="section"><h3>吸引力画像</h3>';
+html+='<div class="idx-row"><div class="l">激情值</div><div class="idx-bar"><i style="width:'+t.idx.passion+'%"></i></div><div class="p">'+t.idx.passion+'</div></div>';
+html+='<div class="idx-row"><div class="l">亲密度</div><div class="idx-bar"><i style="width:'+t.idx.intimacy+'%"></i></div><div class="p">'+t.idx.intimacy+'</div></div>';
+html+='<div class="idx-row"><div class="l">探索值</div><div class="idx-bar"><i style="width:'+t.idx.adventure+'%"></i></div><div class="p">'+t.idx.adventure+'</div></div></div>';
+html+='<div class="section"><h3>给你的话</h3><div class="note-card">'+t.note+'</div></div>';
+html+='<div class="section"><h3>吸引力使用指南</h3><ul class="guide">';t.guide.forEach(function(g){html+='<li>'+g+'</li>'});html+='</ul></div>';
+html+='<div class="section"><h3>吸引力类型排行</h3><div class="rank">';rows.forEach(function(r){html+='<div class="rrow'+(r.k===topKey?' top':'')+'"><div class="rname">'+r.t.cn+'</div><div class="rbar"><i style="width:'+Math.max(r.pct,4)+'%"></i></div><div class="rp">'+r.pct+'</div></div>'});html+='</div></div></div>';
+$('resultRoot').innerHTML=html;
+var share='我隐藏的亲密吸引力类型是【'+t.cn+'】——'+t.tagline+'\n关键词：'+t.tags.join(' · ')+'\n来测测你隐藏的吸引力是什么类型 →';
+$('shareText').textContent=share;$('shareText').dataset.share=share}
+$('startBtn').onclick=function(){cur=0;answers=[];renderQuestion();showScreen('quiz')};
+$('backBtn').onclick=function(){if(cur>0){cur--;renderQuestion()}};
+$('restartBtn').onclick=function(){cur=0;answers=[];showScreen('cover')};
+$('backQBtn').onclick=function(){cur=total-1;renderQuestion();showScreen('quiz')};
+$('shareBtn').onclick=function(){var txt=$('shareText').dataset.share||$('shareText').textContent;$('shareText').style.display='block';var btn=$('shareBtn');btn.textContent='分享文案已生成';var done=function(){btn.textContent='已复制';setTimeout(function(){btn.textContent='复制我的类型卡'},1800)};try{navigator.clipboard.writeText(txt).then(done,function(){window.prompt('复制下面的文案分享：',txt);btn.textContent='已复制';setTimeout(function(){btn.textContent='复制我的类型卡'},1800)})}catch(e){window.prompt('复制下面的文案分享：',txt);done()}};
+window.__quizTest={QUESTIONS:QUESTIONS,TYPES:TYPES,calc:calc,answers:function(){return answers.slice()}};
+</script>
+</body>
+</html>
