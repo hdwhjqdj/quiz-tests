@@ -103,6 +103,27 @@ h1 em{font-style:normal;background:linear-gradient(120deg,#d96b8a,#8a7bb8);backg
 .foot{text-align:center;font-size:10px;color:var(--muted);line-height:1.9}
 .foot b{display:block;font-size:8px;letter-spacing:.3em;color:rgba(93,74,110,.4);margin-top:8px;font-weight:700}
 @media(max-width:380px){.side{display:none}.mast{padding:30px 14px 22px 18px}.card{padding:26px 14px 16px}.art{width:52px;height:52px;opacity:.8}}
+
+/* ===== v4 paper grain + gold foil ===== */
+:root{--foil:linear-gradient(96deg,#6f5222 0%,#b8913f 13%,#fdf0c4 27%,#b8913f 39%,#7d5c26 51%,#f2dda8 64%,#caa45d 78%,#6f5222 100%)}
+body::after{content:"";position:fixed;inset:0;z-index:8;pointer-events:none;mix-blend-mode:multiply;opacity:.18;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23p)' opacity='.55'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(112deg,rgba(122,92,42,.05) 0 1px,transparent 1px 7px);
+  background-size:150px 150px,auto}
+@keyframes foilFlow{to{background-position:230% 0}}
+.mast,.card{outline:1px solid rgba(201,163,92,.42);outline-offset:4px}
+.mast h1 em,.card h2{background:var(--foil);background-size:230% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:foilFlow 9s linear infinite;filter:drop-shadow(0 1px 0 rgba(255,255,255,.8))}
+.mast h1 em{border-bottom-color:rgba(201,163,92,.5)}
+.frame{border-color:rgba(201,163,92,.35)}
+.frame i{border-color:rgba(201,163,92,.75);box-shadow:0 0 6px rgba(201,163,92,.3)}
+.stamp,.card .tidx{border-color:rgba(201,163,92,.6);color:#a97e33;box-shadow:inset 0 0 0 2px rgba(255,255,255,.5),0 2px 0 rgba(201,163,92,.2)}
+.stamp small{color:#b8913f}
+.rule::before,.rule::after{background:var(--foil);opacity:.7}
+.card .meta span{border-color:rgba(201,163,92,.5)}
+.speed a{border-color:rgba(201,163,92,.5);box-shadow:3px 3px 0 rgba(201,163,92,.16)}
+.card.dark{outline-color:rgba(201,163,92,.55)}
+@media(max-width:380px){body::after{opacity:.14}}
 </style>
 </head>
 <body>
